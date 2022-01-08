@@ -10,6 +10,11 @@ ENV QUICKLISP_DIST_VERSION=latest
 ENV QUICKLISP_CLIENT_VERSION=latest
 ENV QUICKLISP_ADD_TO_INIT_FILE=true
 ENV APP_ENV=production
+
+ENV CAS_URL="https://casserver.herokuapp.com/cas"
+ENV APP_URL="http://localhost:5000"
+ENV APP_EXCLUDES="/ /logout"
+
 RUN /usr/local/bin/install-quicklisp
 RUN cd /root/quicklisp/local-projects/ \
     && git clone https://github.com/fferrere/cl-cas \

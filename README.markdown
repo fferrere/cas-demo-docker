@@ -17,6 +17,14 @@ prompt> cd cas-demo-docker
 prompt> docker build -t cas-demo .
 ```
 
+## Configuration
+
+The Dockerfile contains 4 vars you can change :
+- [Required] CAS_URL : The cas server URL, default to "https://casserver.herokuapp.com/cas"
+- [Required] APP_URL : The CAS-DEMO web app URL. Default to "http://localhost:5000"
+- [Optional] APP_LOGOUT_URL : The CAS-DEMO logout URL. Default to "http://localhost:5000/logout"
+- [Required] APP_EXCLUDES : List of paths of the web app excluded from CAS authentication (public pages). Default  "/ /logout"
+
 ## Start container
 CAS Demo Web app listen to port 5000
 
